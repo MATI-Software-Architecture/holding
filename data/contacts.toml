@@ -1,0 +1,19 @@
+[[contacts]]
+name = "John Doe"
+email = "john.doe@email.com"
+phone = "1234567890"
+address = "123 Main St"
+city = "New York"
+state = "NY"
+zip = "10001"
+country = "US"
+
+[[contacts]]
+name = "Jane Doe"
+email = "jane.doe@email.com"
+phone = "0987654321"
+address = "456 Main St"
+city = "New York"
+state = "NY"
+zip = "10001"
+country = "US"
