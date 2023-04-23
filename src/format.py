@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from bson.objectid import ObjectId
-from app import format_collection
+from db import format_collection
 from src import utils
 
 format = Blueprint(

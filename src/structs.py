@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from bson.objectid import ObjectId
-from app import struct_collection
+from db import struct_collection
 
 structs = Blueprint(
     'structs_manager', __name__, url_prefix='/config/struct'

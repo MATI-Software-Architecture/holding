@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from bson.objectid import ObjectId
-from app import data_collection, format_collection, struct_collection
+from db import data_collection, format_collection, struct_collection
 from src import utils
 
 data = Blueprint(
@@ -29,7 +29,9 @@ def create_document(company):
     program = ''
     if format not in ['json', 'xml']:
         config = format_collection.find_one(
-            {'format': format}, {'_id': 0, 'program': 1})
+            {'format': format}, 
+            {'_id': 0, 'program': 1}
+        )
         if config is None:
             return jsonify({'error': 'No program found'}), 404
         program = config['program']
@@ -47,7 +49,8 @@ def create_document(company):
 
     # mapping fields
     mapping = struct_collection.find_one(
-        {'_id': company}, {'_id': 0, 'mapping': 1}
+        {'_id': company}, 
+        {'_id': 0, 'mapping': 1}
     )
     if mapping:
         for key, value in mapping['mapping'].items():
@@ -56,7 +59,8 @@ def create_document(company):
 
     # mandatory fields
     mandatory = struct_collection.find_one(
-        {'_id': 'mandatory'}, {'_id': 0, 'fields': 1}
+        {'_id': 'mandatory'}, 
+        {'_id': 0, 'fields': 1}
     )
     if mandatory:
         for field in mandatory['fields']:
@@ -110,7 +114,8 @@ def delete_document(company, id):
     Delete a single document from the collection by ID
     """
     result = data_collection.delete_one(
-        {'_id': ObjectId(id), 'company': company})
+        {'_id': ObjectId(id), 'company': company}
+    )
     if result.deleted_count == 0:
         return jsonify({'error': 'Document not found'}), 404
     else:
