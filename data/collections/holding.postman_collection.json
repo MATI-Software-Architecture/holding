@@ -1,0 +1,687 @@
+{
+	"info": {
+		"_postman_id": "3184077e-c044-4a10-bd22-8411d67ce8a1",
+		"name": "holding",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14671630",
+		"_collection_link": "https://soydigi.postman.co/workspace/API-Tests~d01a1449-1555-4c91-b51e-2e02f6678bad/collection/14671630-3184077e-c044-4a10-bd22-8411d67ce8a1?action=share&creator=14671630&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "data create format",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/format/contact.json",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/format/contact.toml",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/format/contact.xml",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/format/contact.yaml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/{{company}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"{{company}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data create mandatory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/mandatory/complete.xml"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/mandatory/mandatory.xml",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/mandatory/missing.xml",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/{{company}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"{{company}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data create mapping",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/mapping/english.yaml"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Usuario/Documents/Universidad/Semestres/Semestre3/Architecture/Repositorios/holding/data/mapping/spanish.yaml",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/{{company}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"{{company}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data read company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/{{company}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"{{company}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data read all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data delete all",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data delete company item",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/{{company}}/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"{{company}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data delete company id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-hx-orgid",
+						"value": "Xds4pDg9TmbF",
+						"type": "text"
+					},
+					{
+						"key": "x-hx-config-type",
+						"value": "xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/data/{{company}}/64444549ac85a3de0add0365",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"data",
+						"{{company}}",
+						"64444549ac85a3de0add0365"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "format create toml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"format\": \"toml\",\r\n    \"package\": \"toml\",\r\n    \"program\": \"import toml\\ndata = toml.loads(file)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/format",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"format"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "format create yaml",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"format\": \"yaml\",\r\n    \"package\": \"pyyaml\",\r\n    \"program\": \"import yaml\\ndata = yaml.safe_load(file)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/format",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"format"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "format delete item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/format/64440614ac85a3de0add0364",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"format",
+						"64440614ac85a3de0add0364"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "format read all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/format",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"format"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "struc mandatory all",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": [\r\n        \"name\", \"phone\", \"email\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/struct/mandatory",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"struct",
+						"mandatory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "struc mandatory all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/struct/mandatory",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"struct",
+						"mandatory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "struc mapping company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mapping\": {\r\n        \"name\": \"nombre\",\r\n        \"email\": \"correo\",\r\n        \"phone\": \"telefono\",\r\n        \"address\": \"direccion\",\r\n        \"city\": \"ciudad\",\r\n        \"state\":\"estado\",\r\n        \"country\":\"pais\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/struct/mapping/{{company}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"struct",
+						"mapping",
+						"{{company}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "struc mapping company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/config/struct/mapping/{{company}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"config",
+						"struct",
+						"mapping",
+						"{{company}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "company",
+			"value": "colsanitas"
+		},
+		{
+			"key": "company",
+			"value": "colsubsidio",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

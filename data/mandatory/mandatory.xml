@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contact>
+    <name>John Doe</name>
+    <email>john.doe@email.com</email>
+    <phone>1234567890</phone>
+    <tag>mandatory</tag>
+</contact>

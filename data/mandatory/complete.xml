@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<contact>
+    <name>John Doe</name>
+    <email>john.doe@email.com</email>
+    <phone>1234567890</phone>
+    <address>123 Main St</address>
+    <city>New York</city>
+    <state>NY</state>
+    <zip>10001</zip>
+    <country>US</country>
+    <tag>complete</tag>
+</contact>
